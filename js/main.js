@@ -1,182 +1,45 @@
-/**
- * Eduarte Calixto — Portfolio
- * JavaScript moderno e sem dependências externas.
- */
-
+/* Interações acessíveis do portfólio */
 document.addEventListener("DOMContentLoaded", () => {
-    "use strict";
+  const toggle = document.querySelector("#menu-toggle");
+  const links = document.querySelector("#nav-links");
+  const backTop = document.querySelector("#back-top");
+  const year = document.querySelector("#current-year");
+  if (year) year.textContent = new Date().getFullYear();
 
-    /* =========================================================
-       Elementos principais
-    ========================================================== */
-
-    const menuToggle = document.querySelector("#menu-toggle");
-    const menu = document.querySelector("#menu");
-    const menuOpenIcon = document.querySelector("#menu-open-icon");
-    const menuCloseIcon = document.querySelector("#menu-close-icon");
-
-    const backToTop = document.querySelector("#back-to-top");
-    const currentYear = document.querySelector("#current-year");
-
-    const navigationLinks = document.querySelectorAll(
-        '#menu a[href^="#"]'
-    );
-
-    const revealElements = document.querySelectorAll(".reveal");
-
-    /* =========================================================
-       Ano automático do footer
-    ========================================================== */
-
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
-
-    /* =========================================================
-       Menu mobile
-    ========================================================== */
-
-    const setMenuState = (isOpen) => {
-        if (!menu || !menuToggle) {
-            return;
-        }
-
-        menu.classList.toggle("hidden", !isOpen);
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Fechar menu" : "Abrir menu"
-        );
-
-        if (menuOpenIcon) {
-            menuOpenIcon.classList.toggle("hidden", isOpen);
-        }
-
-        if (menuCloseIcon) {
-            menuCloseIcon.classList.toggle("hidden", !isOpen);
-        }
-    };
-
-    if (menuToggle && menu) {
-        menuToggle.addEventListener("click", () => {
-            const isOpen =
-                menuToggle.getAttribute("aria-expanded") === "true";
-
-            setMenuState(!isOpen);
-        });
-    }
-
-    /* Fechar menu após selecionar uma seção */
-
-    navigationLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            setMenuState(false);
-        });
+  const closeMenu = () => {
+    if (!toggle || !links) return;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Abrir menu");
+    links.classList.remove("open");
+  };
+  if (toggle && links) {
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      links.classList.toggle("open", open);
     });
-
-    /* Fechar menu com Escape */
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            setMenuState(false);
-
-            if (menuToggle) {
-                menuToggle.focus();
-            }
-        }
+    links.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") { closeMenu(); toggle.focus(); }
     });
+    window.addEventListener("resize", () => { if (window.innerWidth > 760) closeMenu(); });
+  }
 
-    /* Fechar menu quando a tela voltar para desktop */
+  const revealItems = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+    revealItems.forEach(item => observer.observe(item));
+  } else revealItems.forEach(item => item.classList.add("is-visible"));
 
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 768) {
-            setMenuState(false);
-        }
-    });
-
-    /* =========================================================
-       Scroll reveal
-    ========================================================== */
-
-    if ("IntersectionObserver" in window) {
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                });
-            },
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
-            }
-        );
-
-        revealElements.forEach((element) => {
-            revealObserver.observe(element);
-        });
-    } else {
-        /* Fallback para navegadores sem IntersectionObserver */
-        revealElements.forEach((element) => {
-            element.classList.add("is-visible");
-        });
-    }
-
-    /* =========================================================
-       Botão voltar ao topo
-    ========================================================== */
-
-    const updateBackToTop = () => {
-        if (!backToTop) {
-            return;
-        }
-
-        const shouldShow = window.scrollY > 500;
-
-        backToTop.classList.toggle(
-            "is-visible",
-            shouldShow
-        );
-    };
-
-    if (backToTop) {
-        window.addEventListener(
-            "scroll",
-            updateBackToTop,
-            { passive: true }
-        );
-
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-
-        updateBackToTop();
-    }
-
-    /* =========================================================
-       Links externos — segurança adicional
-    ========================================================== */
-
-    const externalLinks = document.querySelectorAll(
-        'a[target="_blank"]'
-    );
-
-    externalLinks.forEach((link) => {
-        link.setAttribute(
-            "rel",
-            "noopener noreferrer"
-        );
-    });
+  const updateBackTop = () => {
+    if (backTop) backTop.classList.toggle("visible", window.scrollY > 450);
+  };
+  window.addEventListener("scroll", updateBackTop, { passive: true });
+  updateBackTop();
+  document.querySelectorAll('a[target="_blank"]').forEach(link => link.setAttribute("rel", "noopener noreferrer"));
 });
