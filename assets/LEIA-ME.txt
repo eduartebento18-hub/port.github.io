@@ -1,1 +1,1 @@
-Coloque sua foto nesta pasta com o nome foto-perfil.jpg para que apareça no portfólio.
+Coloque sua foto de perfil nesta pasta com o nome foto-perfil.jpg. O site exibirá um monograma automaticamente se a foto não estiver presente.

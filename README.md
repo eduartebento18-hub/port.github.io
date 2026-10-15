@@ -1,21 +1,23 @@
-# Eduarte Calixto — Solo Leveling-inspired Portfolio
+# Eduarte Calixto — Hunter Archive
 
-Portfólio responsivo em HTML, CSS e JavaScript com visual inspirado na atmosfera de *Solo Leveling*: interface de sistema, tema escuro, brilho azul/violeta, ranks e missões. A implementação usa identidade visual original e não depende de imagens oficiais do anime.
+Redesign completo inspirado na atmosfera de *Solo Leveling*: interface de sistema, status de jogador, rank de caçador, portal/dungeon, sombras construídas em CSS, árvore de habilidades e log de quests. A arte é original e não usa imagens oficiais do anime.
 
-## Como visualizar
-Abra `index.html` no navegador. Para publicar, envie os arquivos para a raiz do repositório do GitHub Pages.
+## Visualização
+Abra `index.html` no navegador. O site é responsivo e utiliza HTML, CSS e JavaScript.
 
-## Estrutura
-- `index.html` — conteúdo, SEO e links sociais.
-- `css/style.css` — tema, animações e layout responsivo.
-- `js/main.js` — menu mobile, animações ao rolar e ano automático.
-- `assets/foto-perfil.jpg` — coloque sua foto neste caminho para exibi-la no cartão de perfil.
+## Arquivos
+- `index.html` — conteúdo, seções e links.
+- `css/style.css` — novo tema, layouts, efeitos, animações e responsividade.
+- `js/main.js` — menu mobile, ano automático, botão de voltar ao topo e animações de entrada.
+- `assets/foto-perfil.jpg` — adicione sua foto de perfil com esse nome.
 
-## Perfis
+## Redes
 - LinkedIn: https://www.linkedin.com/in/eduarte-calixto-a3443a262/
 - Instagram: https://www.instagram.com/eduartecalixtooo/
+- GitHub: https://github.com/eduartebento18-hub/EduarteCalixto
+
+## Publicar no GitHub Pages
+Envie os arquivos e pastas deste pacote para a raiz do repositório usado no GitHub Pages. Mantenha a estrutura de diretórios.
 
 ## Antes de publicar
-- Adicione sua foto como `assets/foto-perfil.jpg` (JPG).
-- Confira o e-mail e os links dos repositórios dos projetos.
-- Mantenha apenas tecnologias e competências que consiga apresentar em uma entrevista.
+Confira se os dados profissionais, endereço de e-mail e repositório GitHub estão atualizados. A lista de tecnologias representa estudos e práticas informados no portfólio, não certificações.

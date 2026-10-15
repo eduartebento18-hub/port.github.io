@@ -3,102 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050711">
-  <meta name="color-scheme" content="dark">
-  <meta name="description" content="Portfólio de Eduarte Calixto — desenvolvimento de sistemas, projetos web e evolução em tecnologia.">
-  <meta property="og:title" content="Eduarte Calixto — Desenvolvedor de Sistemas">
-  <meta property="og:description" content="Transformando aprendizado em soluções digitais. Conheça meus projetos e entre em contato.">
-  <meta property="og:type" content="website">
-  <title>Eduarte Calixto — Desenvolvedor de Sistemas</title>
+  <meta name="theme-color" content="#080611">
+  <meta name="description" content="Portfólio de Eduarte Calixto — desenvolvedor de sistemas em formação, projetos web e evolução em tecnologia.">
+  <meta property="og:title" content="Eduarte Calixto | Hunter Archive">
+  <meta property="og:description" content="Um caçador de bugs em evolução. Explore minhas missões, habilidades e projetos.">
+  <title>EDUARTE CALIXTO // HUNTER ARCHIVE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"><div class="violet-mist"></div><div class="rune rune-one">ᛟ</div><div class="rune rune-two">ᚷ</div><div class="rune rune-three">ᛉ</div></div>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <div class="ambient" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span><div class="grid-bg"></div></div>
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Navegação principal">
-      <a class="brand" href="#home" aria-label="Eduarte Calixto, início"><span class="brand-mark">EC<span>.</span></span><span class="brand-name">EDUARTE CALIXTO<small>DEVELOPER PORTFOLIO</small></span></a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span></button>
-      <div class="nav-links" id="nav-links">
-        <a href="#about">Sobre</a><a href="#skills">Competências</a><a href="#projects">Projetos</a><a href="#journey">Trajetória</a><a class="nav-cta" href="#contact">Vamos conversar <span>↗</span></a>
-      </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Início">
+      <span class="brand-emblem"><span>EC</span><i></i></span>
+      <span class="brand-copy">HUNTER ARCHIVE<small>PLAYER ID: EDUARTE-C</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+      <a href="#status">STATUS</a><a href="#skills">ABILITIES</a><a href="#projects">QUESTS</a><a href="#journey">ARCHIVE</a>
+      <a class="nav-contact" href="#contact">ESTABELECER CONTATO <span>↗</span></a>
     </nav>
   </header>
+
   <main id="main">
-    <section class="hero wrap" id="home">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse"></span> EM EVOLUÇÃO CONTÍNUA <span class="eyebrow-line"></span> RESENDE, RJ</div>
-        <p class="overline"><span class="system-mark">▰</span> CAÇADOR DE TECNOLOGIA · DESENVOLVIMENTO DE SISTEMAS</p>
-        <div class="rank-label"><span class="rank-symbol">✦</span> PLAYER PROFILE <span class="rank-line"></span> RANK: E → S</div>
-        <h1>Subindo de nível.<br><span class="gradient-text">Um commit por vez.</span></h1>
-        <p class="hero-description">Sou <strong>Eduarte Calixto</strong>, desenvolvedor de sistemas em formação. Transformo cada desafio em uma nova missão: aprender, construir projetos web e evoluir minhas habilidades com consistência.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#projects">Explorar projetos <span>↘</span></a><a class="button button-ghost" href="#contact">Entrar em contato <span>↗</span></a></div>
-        <div class="hero-meta"><span><i class="meta-dot"></i> Aberto a conexões profissionais</span><span class="meta-separator">/</span><span>Brasil · Remoto</span></div>
+    <section class="hero" id="home">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="magic-circle circle-a"></div><div class="magic-circle circle-b"></div>
+        <div class="gate"><div class="gate-inner"></div><div class="gate-light"></div></div>
+        <div class="shadow-figure figure-main"><i></i><b></b><span></span></div>
+        <div class="shadow-figure figure-side"><i></i><b></b><span></span></div>
+        <div class="shadow-figure figure-small"><i></i><b></b><span></span></div>
+        <div class="particles"></div>
       </div>
-      <div class="hero-visual reveal reveal-delay">
-        <div class="visual-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="mono">developer.profile</span><span class="live-label"><i></i> SYSTEM ONLINE</span></div>
-        <div class="code-card">
-          <div class="code-line"><span class="ln">01</span><span><b class="syntax-purple">const</b> developer = {</span></div>
-          <div class="code-line indent"><span class="ln">02</span><span><b class="syntax-blue">name</b>: <b class="syntax-green">'Eduarte Calixto'</b>,</span></div>
-          <div class="code-line indent"><span class="ln">03</span><span><b class="syntax-blue">focus</b>: <b class="syntax-green">'Web Development'</b>,</span></div>
-          <div class="code-line indent"><span class="ln">04</span><span><b class="syntax-blue">mindset</b>: <b class="syntax-green">'Always learning'</b>,</span></div>
-          <div class="code-line indent"><span class="ln">05</span><span><b class="syntax-blue">goal</b>: <b class="syntax-green">'Build useful things'</b></span></div>
-          <div class="code-line"><span class="ln">06</span><span>};</span></div>
-          <div class="code-line code-comment"><span class="ln">07</span><span>// evolução todos os dias <span class="cursor">▋</span></span></div>
+      <div class="hero-content">
+        <div class="system-kicker"><span class="live-dot"></span> SYSTEM INITIALIZED <span class="kicker-line"></span> RESENDE, RJ — BR</div>
+        <p class="eyebrow">HUNTER ASSOCIATION // DIGITAL DIVISION</p>
+        <div class="rank-row"><span class="rank-stamp">E</span><span>HUNTER RANK <b>E-RANK</b></span><span class="rank-separator">/</span><span class="rank-potential">POTENCIAL EM EVOLUÇÃO</span></div>
+        <h1>THE NEXT<br> <span class="title-outline">LEVEL</span> <span class="title-purple">BEGINS</span><span class="title-period">.</span></h1>
+        <p class="hero-description">Eu sou <strong>Eduarte Calixto</strong> — desenvolvedor de sistemas em formação. Cada projeto é uma dungeon, cada bug é um desafio e cada linha de código é um passo rumo ao próximo nível.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="#projects"><span class="button-icon">⚔</span> VER MINHAS QUESTS <span class="button-arrow">↘</span></a><a class="button button-secondary" href="#contact">ACESSAR CONTATO <span>↗</span></a></div>
+        <div class="hero-footnote"><span class="foot-cross">✦</span> DISCIPLINA · CURIOSIDADE · EVOLUÇÃO CONTÍNUA</div>
+      </div>
+      <div class="hero-hud hud-top"><span class="hud-square"></span><div><small>PLAYER DATA</small><b>EDUARTE CALIXTO</b></div><span class="hud-value">#001</span></div>
+      <div class="hero-hud hud-right"><small>MAGIC ENERGY</small><div class="energy-track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b>SYNC // 87%</b></div>
+      <div class="hero-hud hud-bottom"><span class="target-icon">⌖</span><span><small>ACTIVE QUEST</small><b>Become a better developer.</b></span><span class="quest-status">IN PROGRESS</span></div>
+      <a class="scroll-cue" href="#status"><span></span> SCROLL TO DESCEND</a>
+      <div class="hero-index">01 <i></i> 05</div>
+    </section>
+
+    <section class="section status-section" id="status">
+      <div class="section-heading"><div><p class="section-code">01 // PLAYER STATUS</p><h2>STATUS <span>WINDOW</span></h2></div><p class="heading-note">Relatório do caçador<br><span>Atualizado: agora</span></p></div>
+      <div class="status-layout">
+        <article class="player-card">
+          <div class="card-topline"><span>PLAYER PROFILE</span><span class="tiny-live"><i></i> ONLINE</span></div>
+          <div class="player-main">
+            <div class="profile-frame"><div class="profile-rings"></div><img src="assets/foto-perfil.jpg" alt="Foto de perfil de Eduarte Calixto" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="profile-fallback">EC<span>✦</span></span><span class="profile-rank">E</span></div>
+            <div class="player-details"><p class="micro-label">HUNTER NAME</p><h3>Eduarte<br>Calixto<span>.</span></h3><p class="player-role">DESENVOLVEDOR EM FORMAÇÃO</p><div class="player-tags"><span>WEB</span><span>BACK-END</span><span>DATABASE</span></div></div>
+          </div>
+          <div class="player-data">
+            <div><span>CLASSE</span><b>Developer</b></div><div><span>LOCALIZAÇÃO</span><b>Brasil</b></div><div><span>MENTALIDADE</span><b>Level Up</b></div>
+          </div>
+          <div class="xp-label"><span>EXPERIENCE POINTS</span><span>LEARNING MODE</span></div><div class="xp-bar"><i></i></div>
+          <p class="xp-caption">EXP ganha com estudo, prática e projetos reais.</p>
+        </article>
+        <div class="status-right">
+          <div class="status-message"><div class="message-icon">✧</div><div><p class="micro-label">SYSTEM MESSAGE</p><h3>Um novo jogador foi detectado.</h3><p>Objetivo principal: transformar conhecimento em soluções digitais e evoluir a cada missão concluída.</p></div><span class="message-corner">SYS.01</span></div>
+          <div class="stat-grid">
+            <article class="stat-box"><span class="stat-icon">&lt;/&gt;</span><p>SKILL TREE</p><h3>Em expansão</h3><span>Aprendizado constante</span><div class="stat-line"><i></i></div></article>
+            <article class="stat-box"><span class="stat-icon">⌘</span><p>BUILD STATUS</p><h3>Em progresso</h3><span>Projetos práticos</span><div class="stat-line"><i></i></div></article>
+            <article class="stat-box"><span class="stat-icon">⚡</span><p>MAIN QUEST</p><h3>Entrar em TI</h3><span>Construir experiência</span><div class="stat-line"><i></i></div></article>
+            <article class="stat-box"><span class="stat-icon">◈</span><p>GUILD</p><h3>Open to connect</h3><span>Networking profissional</span><div class="stat-line"><i></i></div></article>
+          </div>
         </div>
-        <div class="visual-footer"><div class="avatar-wrap"><img class="avatar" src="assets/foto-perfil.jpg" alt="Foto de perfil de Eduarte Calixto"><span class="avatar-spark" aria-hidden="true">✳</span></div><div class="visual-person"><strong>Eduarte Calixto</strong><span>Desenvolvedor em formação</span></div><div class="visual-badge"><span>HUNTER CLASS</span><br><b>DEVELOPER</b></div></div>
-        <div class="floating-chip chip-one"><span>◈</span> QUEST: BUILD</div><div class="floating-chip chip-two"><span>✦</span> LEVEL UP DAILY</div>
       </div>
-      <div class="system-status"><span class="status-icon">◈</span><span><small>SYSTEM MESSAGE</small><b>Potencial detectado. Próxima missão: desenvolver.</b></span><span class="status-code">[ ACTIVE ]</span></div>
-      <div class="hero-bottom"><span>SCROLL PARA EXPLORAR</span><span class="scroll-line"></span><span class="mono">01 — 05</span></div>
+      <div class="system-quote"><span>“</span><p>Não preciso nascer no rank mais alto. Preciso continuar evoluindo.</p><span class="quote-credit">— PLAYER LOG / 001</span></div>
     </section>
-    <section class="section wrap" id="about">
-      <div class="section-label reveal"><span>01</span> / SOBRE MIM</div>
-      <div class="about-grid">
-        <div class="section-intro reveal"><h2>Mais do que código.<br><span class="muted">Vontade de construir.</span></h2></div>
-        <div class="about-copy reveal reveal-delay"><p class="lead">Minha trajetória combina experiência profissional, disciplina e uma transição intencional para o universo da tecnologia.</p><p>Tenho formação técnica em Logística e estou me desenvolvendo em Desenvolvimento de Sistemas. Gosto de entender como as coisas funcionam, organizar problemas e transformar ideias em experiências digitais claras e úteis.</p><p>Meu objetivo é crescer como desenvolvedor, construir projetos cada vez mais completos e contribuir com equipes que valorizem aprendizado, colaboração e qualidade.</p><a class="text-link" href="#journey">Conheça minha trajetória <span>↗</span></a></div>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading"><div><p class="section-code">02 // SKILL TREE</p><h2>HUNTER <span>ABILITIES</span></h2></div><p class="heading-note">Habilidades desbloqueadas<br><span>Em constante aprimoramento</span></p></div>
+      <div class="skill-tree">
+        <div class="tree-spine"><span>SKILL TREE</span><i></i><b>✦</b></div>
+        <article class="ability-card"><div class="ability-icon">&lt;/&gt;</div><div class="ability-content"><div class="ability-top"><span>ACTIVE SKILL // 001</span><span class="skill-rarity">COMMON</span></div><h3>Interface & Web</h3><p>Construção de páginas, estrutura semântica e experiências responsivas.</p><div class="ability-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Tailwind CSS</span></div></div><div class="ability-level"><small>LEVEL</small><b>01</b><span>UNLOCKED</span></div></article>
+        <article class="ability-card"><div class="ability-icon">{ }</div><div class="ability-content"><div class="ability-top"><span>ACTIVE SKILL // 002</span><span class="skill-rarity rare">RARE POTENTIAL</span></div><h3>Back-end & Database</h3><p>Lógica de aplicações, operações CRUD, persistência e organização de dados.</p><div class="ability-tags"><span>PHP</span><span>Laravel</span><span>SQL</span><span>SQLite</span></div></div><div class="ability-level"><small>LEVEL</small><b>01</b><span>UNLOCKED</span></div></article>
+        <article class="ability-card"><div class="ability-icon">⌘</div><div class="ability-content"><div class="ability-top"><span>PASSIVE SKILL // 003</span><span class="skill-rarity">FOUNDATION</span></div><h3>Developer Workflow</h3><p>Controle de versão, resolução de problemas e evolução incremental.</p><div class="ability-tags"><span>Git</span><span>GitHub</span><span>REST</span><span>Debugging</span><span>Responsividade</span></div></div><div class="ability-level"><small>LEVEL</small><b>01</b><span>UNLOCKED</span></div></article>
       </div>
-      <div class="principles">
-        <article class="principle-card reveal"><span class="principle-icon">01</span><h3>Aprendizado constante</h3><p>Estudo contínuo, prática e evolução técnica a cada projeto.</p></article>
-        <article class="principle-card reveal reveal-delay"><span class="principle-icon">02</span><h3>Responsabilidade</h3><p>Compromisso com processos, atenção aos detalhes e entrega.</p></article>
-        <article class="principle-card reveal reveal-delay-2"><span class="principle-icon">03</span><h3>Foco em soluções</h3><p>Buscar caminhos simples, organizados e úteis para cada desafio.</p></article>
+      <p class="disclaimer"><span>ⓘ</span> As habilidades listadas representam tecnologias estudadas e praticadas, não certificações nem níveis profissionais declarados.</p>
+    </section>
+
+    <section class="section quests-section" id="projects">
+      <div class="section-heading"><div><p class="section-code">03 // QUEST LOG</p><h2>QUESTS <span>COMPLETED</span></h2></div><p class="heading-note">Projetos são missões reais.<br><span>Aprender. Construir. Refinar.</span></p></div>
+      <div class="quest-list">
+        <article class="quest-card quest-featured">
+          <div class="quest-number">QUEST 001 <span>MAIN STORY</span></div>
+          <div class="quest-art store-art" aria-hidden="true"><div class="art-glow"></div><div class="mock-browser"><div class="mock-browser-bar"><i></i><i></i><i></i><span>techstore.app / dashboard</span></div><div class="mock-layout"><div class="mock-sidebar"><b>T.</b><i></i><i></i><i></i><i></i></div><div class="mock-products"><div class="mock-heading"><span>CATÁLOGO DE PRODUTOS</span><b>+</b></div><div class="mock-product-row"><i></i><i></i><i></i></div><div class="mock-long"></div><div class="mock-long short"></div><div class="mock-product-row second"><i></i><i></i><i></i></div></div></div></div><div class="art-stamp">LARAVEL<br><b>CRUD SYSTEM</b></div></div>
+          <div class="quest-details"><div class="quest-titleline"><div><p class="quest-type">WEB APPLICATION / FULL-STACK STUDY</p><h3>TechStore — Catálogo de Produtos</h3></div><span class="quest-rank">C</span></div><p>Aplicação de catálogo desenvolvida para praticar operações CRUD, relacionamento entre categorias e produtos, filtros de busca, paginação e upload de imagens.</p><div class="quest-tech"><span>Laravel</span><span>PHP</span><span>SQLite</span><span>Bootstrap</span></div><div class="quest-footer"><span class="quest-state"><i></i> TRAINING QUEST</span><span>STATUS: EM EVOLUÇÃO</span></div></div>
+        </article>
+        <article class="quest-card">
+          <div class="quest-number">QUEST 002 <span>PERSONAL PROJECT</span></div>
+          <div class="quest-art portfolio-art" aria-hidden="true"><div class="portfolio-orb"></div><div class="portfolio-screen"><div class="portfolio-top"><i></i><i></i><i></i></div><div class="portfolio-kicker">HUNTER ARCHIVE</div><div class="portfolio-title">EDUARTE<br><span>CALIXTO.</span></div><div class="portfolio-bars"><i></i><i></i><i></i></div><div class="portfolio-mini"></div></div><span class="art-stamp purple-stamp">UI / UX<br><b>FRONT-END</b></span></div>
+          <div class="quest-details"><div class="quest-titleline"><div><p class="quest-type">FRONT-END / PERSONAL BRAND</p><h3>Portfólio pessoal</h3></div><span class="quest-rank">D</span></div><p>Experiência pessoal responsiva para apresentar perfil, competências, projetos e canais profissionais com uma identidade visual própria.</p><div class="quest-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI Design</span></div><div class="quest-footer"><span class="quest-state"><i></i> ACTIVE QUEST</span><span>STATUS: EM EVOLUÇÃO</span></div></div>
+        </article>
+      </div>
+      <div class="quest-bottom"><span class="quest-bottom-icon">✧</span><span><b>NOVA QUEST DISPONÍVEL</b><small>Mais projetos serão adicionados conforme novas habilidades forem desbloqueadas.</small></span><span class="quest-bottom-code">QUEST ???</span></div>
+    </section>
+
+    <section class="section archive-section" id="journey">
+      <div class="section-heading"><div><p class="section-code">04 // HUNTER ARCHIVE</p><h2>PLAYER <span>JOURNEY</span></h2></div><p class="heading-note">Cada etapa soma experiência.<br><span>Histórico de evolução</span></p></div>
+      <div class="archive-layout"><div class="archive-intro"><div class="archive-emblem">EC<span>✦</span></div><h3>O próximo nível<br>é construído.</h3><p>Minha experiência profissional fortaleceu disciplina, atenção e responsabilidade. Agora levo essas habilidades para minha transição para tecnologia.</p><div class="archive-note"><span>ARCHIVE FILE</span><b>EDUARTE_CALI XTO.log</b><i>ACCESS: PUBLIC</i></div></div>
+        <div class="timeline">
+          <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>01 / CURRENT MISSION</span><span>IN PROGRESS</span></div><h3>Técnico em Desenvolvimento de Sistemas</h3><p>Formação e prática em programação, aplicações web e fundamentos de desenvolvimento de software.</p><span class="timeline-chip">TECHNOLOGY</span></article>
+          <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>02 / COMPLETED</span><span>FOUNDATION</span></div><h3>Técnico em Logística</h3><p>Base em organização, processos e visão operacional, conhecimentos que também podem se conectar a soluções digitais e análise de dados.</p><span class="timeline-chip">PROCESS & OPERATIONS</span></article>
+          <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>03 / EXPERIENCE LOG</span><span>2019 — ATUAL</span></div><h3>Vigilante · FXX Segurança e Transporte de Valores LTDA</h3><p>Experiência profissional com foco em responsabilidade, atenção e cumprimento de procedimentos.</p><span class="timeline-chip">PROFESSIONAL EXPERIENCE</span></article>
+          <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>04 / EXPERIENCE LOG</span><span>SET. 2018 — ABR. 2019</span></div><h3>Vigilante · Claufran</h3><p>Experiência em segurança patrimonial e rotina operacional.</p><span class="timeline-chip">PROFESSIONAL EXPERIENCE</span></article>
+        </div>
       </div>
     </section>
-    <section class="section section-dark" id="skills"><div class="wrap">
-      <div class="section-label reveal"><span>02</span> / STACK & COMPETÊNCIAS</div>
-      <div class="skills-heading"><h2 class="reveal">Ferramentas para<br><span class="gradient-text">tirar ideias do papel.</span></h2><p class="reveal reveal-delay">Competências em desenvolvimento por meio de estudos e projetos práticos. A stack evolui junto com minha experiência.</p></div>
-      <div class="skill-groups">
-        <article class="skill-group reveal"><div class="skill-group-head"><span class="skill-icon">&lt;/&gt;</span><div><h3>Desenvolvimento web</h3><p>Interface e estrutura</p></div></div><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Tailwind CSS</span></div></article>
-        <article class="skill-group reveal reveal-delay"><div class="skill-group-head"><span class="skill-icon">{ }</span><div><h3>Back-end & dados</h3><p>Lógica e persistência</p></div></div><div class="tags"><span>PHP</span><span>Laravel</span><span>SQL</span><span>SQLite</span></div></article>
-        <article class="skill-group reveal reveal-delay-2"><div class="skill-group-head"><span class="skill-icon">↗</span><div><h3>Fluxo de trabalho</h3><p>Construção e evolução</p></div></div><div class="tags"><span>Git</span><span>GitHub</span><span>CRUD</span><span>REST</span><span>Design responsivo</span></div></article>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-portal" aria-hidden="true"><div class="portal-ring ring-one"></div><div class="portal-ring ring-two"></div><div class="portal-core"></div></div>
+      <div class="contact-inner">
+        <p class="section-code">05 // GUILD CONNECTION</p><p class="eyebrow contact-eyebrow">TRANSMISSION INCOMING</p>
+        <h2>READY TO<br><span>TEAM UP?</span></h2>
+        <p class="contact-copy">Estou aberto a conexões profissionais, oportunidades de entrada em tecnologia e conversas sobre projetos. Vamos descobrir o que podemos construir juntos.</p>
+        <div class="contact-links">
+          <a class="contact-link main-contact" href="mailto:eduaretcalixto@gmail.com"><span class="contact-icon">✉</span><span><small>DIRECT TRANSMISSION</small><b>Enviar um e-mail</b></span><span class="contact-arrow">↗</span></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/eduarte-calixto-a3443a262/" target="_blank" rel="noopener noreferrer"><span class="contact-icon linkedin-icon">in</span><span><small>PROFESSIONAL GUILD</small><b>LinkedIn / Eduarte Calixto</b></span><span class="contact-arrow">↗</span></a>
+          <a class="contact-link" href="https://www.instagram.com/eduartecalixtooo/" target="_blank" rel="noopener noreferrer"><span class="contact-icon">◎</span><span><small>PERSONAL FEED</small><b>Instagram / @eduartecalixtooo</b></span><span class="contact-arrow">↗</span></a>
+          <a class="contact-link" href="https://github.com/eduartebento18-hub/EduarteCalixto" target="_blank" rel="noopener noreferrer"><span class="contact-icon">⌘</span><span><small>CODE REPOSITORY</small><b>GitHub / Projetos</b></span><span class="contact-arrow">↗</span></a>
+        </div>
+        <div class="contact-bottom"><span class="live-dot"></span> CONNECTION AVAILABLE <span>·</span> BRAZIL / REMOTE</div>
       </div>
-      <p class="skills-note"><span>✳</span> SYSTEM NOTE: tecnologias estudadas e praticadas. Evolução contínua — sem níveis de proficiência inventados.</p>
-    </div></section>
-    <section class="section wrap" id="projects">
-      <div class="section-label reveal"><span>03</span> / QUESTS CONCLUÍDAS — PROJETOS</div>
-      <div class="projects-heading"><div><h2 class="reveal">Feito para aprender.<br><span class="muted">Construído para evoluir.</span></h2></div><p class="reveal reveal-delay">Projetos práticos que demonstram minha evolução em desenvolvimento, organização de código e construção de interfaces.</p></div>
-      <div class="project-grid">
-        <article class="project-card project-feature reveal"><div class="project-art art-store"><div class="art-top"><span class="art-logo">T.</span><span class="art-pill">WEB APP</span></div><div class="store-preview"><div class="store-sidebar"></div><div class="store-content"><div class="store-bar"></div><div class="store-cards"><i></i><i></i><i></i></div><div class="store-lines"></div></div></div><span class="art-index">PROJECT / 001</span></div><div class="project-info"><div class="project-title-row"><div><p class="project-type">LARAVEL · FULL-STACK STUDY</p><h3>TechStore — Catálogo de produtos</h3></div><span class="project-arrow">↗</span></div><p>Aplicação de catálogo com foco em operações CRUD, relacionamento entre categorias e produtos, filtros de busca e gerenciamento de imagens.</p><div class="project-tags"><span>Laravel</span><span>PHP</span><span>SQLite</span><span>Bootstrap</span></div><div class="project-status"><span></span> Projeto de estudo</div></div></article>
-        <article class="project-card reveal reveal-delay"><div class="project-art art-portfolio"><div class="portfolio-window"><div class="portfolio-nav"><i></i><i></i><i></i></div><div class="portfolio-hero"><span>HELLO, WORLD.</span><b>Digital<br>presence<span>.</span></b><i></i></div><div class="portfolio-bottom"><i></i><i></i><i></i></div></div><span class="art-index">PROJECT / 002</span></div><div class="project-info"><div class="project-title-row"><div><p class="project-type">FRONT-END · UI</p><h3>Portfólio pessoal</h3></div><span class="project-arrow">↗</span></div><p>Experiência pessoal responsiva com identidade visual tecnológica, navegação acessível e foco na apresentação profissional.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span></div><div class="project-status"><span></span> Em evolução</div></div></article>
-      </div>
-      <div class="projects-foot"><span class="mono">MORE PROJECTS IN PROGRESS</span><span class="foot-line"></span><span>O próximo projeto começa com uma ideia.</span></div>
     </section>
-    <section class="section section-dark" id="journey"><div class="wrap">
-      <div class="section-label reveal"><span>04</span> / HISTÓRICO DO PLAYER</div><div class="journey-grid"><div><h2 class="reveal">Experiência que<br><span class="muted">vai além da tecnologia.</span></h2><p class="journey-intro reveal reveal-delay">Cada etapa contribuiu para minha disciplina, comunicação e responsabilidade profissional — competências que levo para minha transição para TI.</p></div>
-      <div class="timeline">
-        <article class="timeline-entry reveal"><span class="timeline-marker"></span><div class="timeline-date">EM ANDAMENTO</div><h3>Técnico em Desenvolvimento de Sistemas</h3><p>Formação e prática em programação, construção de aplicações e fundamentos de desenvolvimento de software.</p><span class="timeline-tag">TECNOLOGIA</span></article>
-        <article class="timeline-entry reveal"><span class="timeline-marker"></span><div class="timeline-date">FORMAÇÃO TÉCNICA</div><h3>Técnico em Logística</h3><p>Base em organização, processos e visão operacional — conhecimentos que podem se conectar a soluções digitais e análise de dados.</p><span class="timeline-tag">PROCESSOS</span></article>
-        <article class="timeline-entry reveal"><span class="timeline-marker"></span><div class="timeline-date">2019 — ATUAL</div><h3>Vigilante · FXX Segurança e Transporte de Valores LTDA</h3><p>Atuação em segurança patrimonial, com foco em responsabilidade, atenção e cumprimento de procedimentos.</p><span class="timeline-tag">EXPERIÊNCIA PROFISSIONAL</span></article>
-        <article class="timeline-entry reveal"><span class="timeline-marker"></span><div class="timeline-date">SET. 2018 — ABR. 2019</div><h3>Vigilante · Claufran</h3><p>Experiência em segurança patrimonial e rotina operacional.</p><span class="timeline-tag">EXPERIÊNCIA PROFISSIONAL</span></article>
-      </div></div>
-    </div></section>
-    <section class="contact-section wrap" id="contact"><div class="contact-card reveal"><div class="contact-decoration" aria-hidden="true">EC<span>.</span></div><div class="section-label"><span>05</span> / INICIAR CONEXÃO</div><div class="contact-layout"><div><h2>Vamos construir<br>algo <span class="gradient-text">relevante?</span></h2><p>Estou aberto a conexões, oportunidades de entrada em tecnologia e conversas sobre projetos. Se você procura alguém comprometido com aprendizado e evolução, vamos conversar.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:eduaretcalixto@gmail.com">Enviar um e-mail <span>↗</span></a><a class="contact-row" href="https://www.linkedin.com/in/eduarte-calixto-a3443a262/" target="_blank" rel="noopener noreferrer"><span class="contact-symbol">in</span><span><small>LINKEDIN</small><b>Conecte-se comigo</b></span><span class="row-arrow">↗</span></a><a class="contact-row" href="https://github.com/eduartebento18-hub/EduarteCalixto" target="_blank" rel="noopener noreferrer"><span class="contact-symbol">⌘</span><span><small>GITHUB</small><b>Veja meu código</b></span><span class="row-arrow">↗</span></a><a class="contact-row" href="https://www.instagram.com/eduartecalixtooo/" target="_blank" rel="noopener noreferrer"><span class="contact-symbol">◎</span><span><small>INSTAGRAM</small><b>@eduartecalixtooo</b></span><span class="row-arrow">↗</span></a></div></div></div></section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">EC<span>.</span></span><span class="brand-name">EDUARTE CALIXTO<small>DEVELOPER PORTFOLIO</small></span></a><p>Projetado com intenção. Construído com consistência.</p><span class="mono">© <span id="current-year"></span> EDUARTE CALIXTO</span></div></footer>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-emblem"><span>EC</span><i></i></span><span class="brand-copy">HUNTER ARCHIVE<small>PLAYER ID: EDUARTE-C</small></span></a><p>EVOLVE. ADAPT. LEVEL UP.</p><span class="footer-copy">© <span id="current-year"></span> EDUARTE CALIXTO</span></footer>
   <a class="back-top" id="back-top" href="#home" aria-label="Voltar ao topo">↑</a>
 </body>
 </html>
