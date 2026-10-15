@@ -102,3 +102,25 @@ h2,h3,.title{color:#fff}
 .mini li,.tags li{color:#6ef0b4;background:rgba(16,185,129,.16)}
 nav a:hover,nav a.on{color:#6ef0b4}
 .shot .bar span{color:#cfdcd7}
+
+/* Seções como balões claros, texto escuro */
+main{padding-top:28px;padding-bottom:12px}
+.hero,.section{--bg:#eef7f3;--surf:#fff;--surf2:#f2faf6;--line:#cfe3da;--ink:#07120d;--muted:#2f463c;--bd:rgba(5,150,105,.75);--em:#047857;--em2:#065f46;
+  background:#eef7f3;color:#07120d;border:2px solid #10b981;border-radius:26px;margin:0 0 28px;padding:clamp(28px,5vw,60px);box-shadow:0 0 0 1px rgba(16,185,129,.15),0 30px 70px -40px rgba(16,185,129,.5)}
+#contato{background:none;border:0;box-shadow:none;padding:0}
+.hero :is(h1,h2,h3),.section :is(h2,h3){color:#07120d;-webkit-text-fill-color:#07120d}
+.hero p,.section p,.list,.list li{color:#1f342b}
+.hero .badge{color:#065f46;background:#d9f2e7}
+.hero .role,.hero .gh,.section .more a,.mini-card h3,.when{color:#065f46}
+.facts dt,.note,.chip,.hero .profile p{color:#3d564b}
+.facts dd{color:#07120d}
+.hero .mini li,.section .tags li{color:#065f46;background:#d9f2e7;border-color:rgba(5,150,105,.6)}
+.hero .btn,.section .btn{background:#fff;color:#07120d}
+.hero .btn.primary,.section .btn.primary{background:#047857;border-color:#047857;color:#fff}
+.hero .btn.primary:hover,.section .btn.primary:hover{background:#065f46;border-color:#065f46}
+.shot{background:#f4fbf8}.shot .bar{background:#e6f3ed}.shot .bar i{background:#b8d4c8}.shot .bar span{color:#3d564b}
+.side b{background:rgba(5,150,105,.35)}.body>b{background:#cfe3da}.body>b.t{background:rgba(5,150,105,.55)}.cards i{background:rgba(5,150,105,.14);border-color:rgba(5,150,105,.4)}
+.cta-panel{background:radial-gradient(500px 220px at 0 0,rgba(16,185,129,.2),transparent 70%),#eef7f3;border-color:#10b981}
+.timeline li:before{border-color:#047857;box-shadow:0 0 0 4px rgba(4,120,87,.15)}
+.badge i{background:#047857}
+@media(max-width:900px){.hero,.section{border-radius:20px}}
