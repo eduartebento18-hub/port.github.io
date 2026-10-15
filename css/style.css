@@ -1,6 +1,6 @@
 :root{--bg:#030504;--surf:#08100d;--surf2:#0b1511;--line:#1c2b26;--ink:#ffffff;--muted:#cfdcd7;--em:#10b981;--em2:#34d399;--deep:#065f46;--head:'Sora',system-ui,sans-serif;--sans:'Inter',system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;background:var(--bg) radial-gradient(900px 500px at 85% -5%,rgba(16,185,129,.07),transparent 60%),radial-gradient(700px 400px at 0 40%,rgba(16,185,129,.03),transparent 60%);background-attachment:fixed}
+body{margin:0;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;background:radial-gradient(900px 500px at 85% -5%,rgba(16,185,129,.1),transparent 60%),radial-gradient(700px 400px at 0 40%,rgba(16,185,129,.04),transparent 60%),#030504;background-attachment:fixed}
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(52,211,153,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(52,211,153,.025) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,#000,transparent 70%)}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 :focus-visible{outline:3px solid var(--em2);outline-offset:3px;border-radius:6px}
@@ -124,3 +124,15 @@ main{padding-top:28px;padding-bottom:12px}
 .timeline li:before{border-color:#047857;box-shadow:0 0 0 4px rgba(4,120,87,.15)}
 .badge i{background:#047857}
 @media(max-width:900px){.hero,.section{border-radius:20px}}
+
+/* Letras pretas nas áreas claras */
+.hero,.section,.hero *,.section *{color:#000!important;-webkit-text-fill-color:#000!important}
+.hero .badge,.hero .badge *{color:#000!important}
+.hero .btn.primary,.section .btn.primary{background:#34d399!important;border-color:#047857!important;color:#000!important}
+.hero .btn.primary:hover,.section .btn.primary:hover{background:#6ee7b7!important}
+.hero .mini li,.section .tags li{background:#c9f0dc!important;border-color:#047857!important;color:#000!important}
+.ico{color:#000!important;background:#c9f0dc!important}
+.list li:before{border-color:#047857!important}
+.facts dt,.note,.chip{color:#1a2b23!important;-webkit-text-fill-color:#1a2b23!important}
+
+html{background:#030504}
