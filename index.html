@@ -12,9 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/effects.css">
   <script src="js/main.js" defer></script>
+  <script src="js/effects.js" defer></script>
 </head>
 <body>
+  <div class="intro" id="intro" role="dialog" aria-label="Notificação do sistema"><div class="sys-window"><div class="sys-tab">NOTIFICAÇÃO</div><p data-line="Você foi selecionado como jogador."></p><p data-line="Carregando perfil: EDUARTE CALIXTO..."></p><p data-line="Rank atual: E — potencial em evolução."></p><p data-line="Missão: tornar-se um desenvolvedor melhor."></p><small>Toque para pular</small></div></div>
+  <noscript><style>.intro{display:none}</style></noscript>
+  <div id="progress" aria-hidden="true"></div><canvas id="embers" aria-hidden="true"></canvas><div id="aura" aria-hidden="true"></div>
+  <div class="arise" id="arise" aria-hidden="true"><span>ARISE</span></div>
   <div class="scanlines" aria-hidden="true"></div>
   <div class="ambient" aria-hidden="true"><div class="violet-mist"></div><div class="rune rune-one">ᛟ</div><div class="rune rune-two">ᚷ</div><div class="rune rune-three">ᛉ</div></div>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -47,7 +53,7 @@
         <div class="rank-row"><span class="rank-stamp">E</span><span>HUNTER RANK <b>E-RANK</b></span><span class="rank-separator">/</span><span class="rank-potential">POTENCIAL EM EVOLUÇÃO</span></div>
         <h1>THE NEXT<br> <span class="title-outline">LEVEL</span> <span class="title-purple">BEGINS</span><span class="title-period">.</span></h1>
         <p class="hero-description">Eu sou <strong>Eduarte Calixto</strong> — desenvolvedor de sistemas em formação. Cada projeto é uma dungeon, cada bug é um desafio e cada linha de código é um passo rumo ao próximo nível.</p>
-        <div class="hero-buttons"><a class="button button-primary" href="#projects"><span class="button-icon">⚔</span> VER MINHAS QUESTS <span class="button-arrow">↘</span></a><a class="button button-secondary" href="#contact">ACESSAR CONTATO <span>↗</span></a></div>
+        <div class="hero-buttons"><a class="button button-primary" href="#projects"><span class="button-icon">⚔</span> VER MINHAS QUESTS <span class="button-arrow">↘</span></a><a class="button button-secondary" href="#contact">ACESSAR CONTATO <span>↗</span></a><button class="button button-secondary arise-btn" id="arise-btn" type="button">ARISE ✦</button></div>
         <div class="hero-footnote"><span class="foot-cross">✦</span> DISCIPLINA · CURIOSIDADE · EVOLUÇÃO CONTÍNUA</div>
       </div>
       <div class="hero-hud hud-top"><span class="hud-square"></span><div><small>PLAYER DATA</small><b>EDUARTE CALIXTO</b></div><span class="hud-value">#001</span></div>
@@ -115,7 +121,7 @@
 
     <section class="section archive-section" id="journey">
       <div class="section-heading"><div><p class="section-code">04 // HUNTER ARCHIVE</p><h2>PLAYER <span>JOURNEY</span></h2></div><p class="heading-note">Cada etapa soma experiência.<br><span>Histórico de evolução</span></p></div>
-      <div class="archive-layout"><div class="archive-intro"><div class="archive-emblem">EC<span>✦</span></div><h3>O próximo nível<br>é construído.</h3><p>Minha experiência profissional fortaleceu disciplina, atenção e responsabilidade. Agora levo essas habilidades para minha transição para tecnologia.</p><div class="archive-note"><span>ARCHIVE FILE</span><b>EDUARTE_CALI XTO.log</b><i>ACCESS: PUBLIC</i></div></div>
+      <div class="archive-layout"><div class="archive-intro"><div class="archive-emblem">EC<span>✦</span></div><h3>O próximo nível<br>é construído.</h3><p>Minha experiência profissional fortaleceu disciplina, atenção e responsabilidade. Agora levo essas habilidades para minha transição para tecnologia.</p><div class="archive-note"><span>ARCHIVE FILE</span><b>EDUARTE_CALIXTO.log</b><i>ACCESS: PUBLIC</i></div></div>
         <div class="timeline">
           <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>01 / CURRENT MISSION</span><span>IN PROGRESS</span></div><h3>Técnico em Desenvolvimento de Sistemas</h3><p>Formação e prática em programação, aplicações web e fundamentos de desenvolvimento de software.</p><span class="timeline-chip">TECHNOLOGY</span></article>
           <article class="timeline-entry"><span class="timeline-point"></span><div class="timeline-meta"><span>02 / COMPLETED</span><span>FOUNDATION</span></div><h3>Técnico em Logística</h3><p>Base em organização, processos e visão operacional, conhecimentos que também podem se conectar a soluções digitais e análise de dados.</p><span class="timeline-chip">PROCESS & OPERATIONS</span></article>

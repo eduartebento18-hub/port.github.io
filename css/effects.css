@@ -1,0 +1,36 @@
+/* Camada de efeitos — Solo Leveling */
+:root{--sys:#7cc4ff}
+body.locked{overflow:hidden}
+.intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#10082a,#05030c 70%);transition:opacity .8s,visibility .8s;cursor:pointer}
+.intro.done{opacity:0;visibility:hidden}
+.sys-window{position:relative;width:min(540px,90vw);padding:34px 30px 26px;border:1px solid var(--sys);background:rgba(10,26,56,.55);box-shadow:0 0 34px rgba(100,175,255,.35),inset 0 0 34px rgba(100,175,255,.1);font:500 13px/2 var(--mono);color:#d6ebff;animation:winIn .6s ease-out}
+.sys-window:before,.sys-window:after{content:"";position:absolute;width:14px;height:14px;border:2px solid #fff}
+.sys-window:before{top:-4px;left:-4px;border-right:0;border-bottom:0}
+.sys-window:after{bottom:-4px;right:-4px;border-left:0;border-top:0}
+.sys-tab{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:2px 18px;background:#06142e;border:1px solid var(--sys);letter-spacing:3px;font-size:11px;color:#fff;text-shadow:0 0 8px var(--sys)}
+.sys-window p{margin:0;min-height:26px;opacity:0}.sys-window p.on{opacity:1}
+.sys-window p.on:after{content:"▌";margin-left:4px;animation:blink .8s steps(1) infinite;color:var(--sys)}
+.sys-window small{display:block;margin-top:14px;color:#6d8fb5;font-size:10px;text-align:right}
+@keyframes winIn{from{opacity:0;transform:scale(.94)}}@keyframes blink{50%{opacity:0}}
+#embers{position:fixed;inset:0;z-index:1;pointer-events:none}
+#aura{position:fixed;left:0;top:0;z-index:2;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(circle,rgba(150,90,255,.16),transparent 65%)}
+#progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:linear-gradient(90deg,var(--violet),var(--pink));box-shadow:0 0 12px var(--purple)}
+.hero h1{animation:glitch 8s infinite steps(1)}
+@keyframes glitch{0%,92%,100%{text-shadow:none;transform:none}93%{text-shadow:4px 0 #7cc4ff,-4px 0 #ed9dff;transform:translateX(3px)}95%{text-shadow:-4px 0 #7cc4ff,4px 0 #ed9dff;transform:translateX(-3px) skewX(-2deg)}97%{text-shadow:2px 0 #7cc4ff;transform:translateX(1px)}}
+.title-purple{text-shadow:0 0 28px rgba(166,107,255,.7)}
+.gate{animation:gatePulse 5s ease-in-out infinite}
+@keyframes gatePulse{50%{filter:drop-shadow(0 0 42px rgba(170,95,255,.7)) brightness(1.2)}}
+.profile-frame img{object-fit:cover;object-position:50% 22%;box-shadow:0 0 40px rgba(150,90,255,.45)}
+.scan-beam{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit}
+.scan-beam:after{content:"";position:absolute;left:0;right:0;height:35%;top:-35%;background:linear-gradient(180deg,transparent,rgba(166,107,255,.38),transparent);animation:scan 4.5s linear infinite}
+@keyframes scan{to{top:100%}}
+.arise-btn{font:inherit;cursor:pointer;letter-spacing:3px;color:#fff;text-shadow:0 0 10px var(--purple)}
+.arise{position:fixed;inset:0;z-index:150;display:grid;place-items:center;pointer-events:none;visibility:hidden;background:radial-gradient(circle,rgba(120,60,230,.55),rgba(5,3,12,.95) 70%)}
+.arise span{font:900 clamp(70px,18vw,220px)/1 var(--display);letter-spacing:.12em;color:#fff;text-shadow:0 0 30px var(--purple),0 0 90px var(--violet);transform:scale(.6);opacity:0}
+.arise.go{visibility:visible;animation:ariseBg 2.2s forwards}
+.arise.go span{animation:ariseTxt 2.2s forwards}
+body.shake{animation:shake .5s 2}
+@keyframes ariseBg{0%{opacity:0}12%,75%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes ariseTxt{0%{transform:scale(.6);opacity:0;filter:blur(14px)}25%{transform:scale(1);opacity:1;filter:none}100%{transform:scale(1.25);opacity:0;letter-spacing:.3em}}
+@keyframes shake{25%{transform:translate(-4px,2px)}50%{transform:translate(4px,-2px)}75%{transform:translate(-2px,-3px)}}
+@media (prefers-reduced-motion:reduce){.hero h1,.gate,.scan-beam:after,body.shake{animation:none}#embers,#aura{display:none}}
